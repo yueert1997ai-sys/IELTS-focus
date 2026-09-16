@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>IELTS Focus</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><h1>IELTS Focus</h1><p>P3 选项上膛训练 · 单选 / 五选二 / 匹配</p></div>
+    <button class="btn alt" id="authToggle">☁ 云同步</button>
+  </div>
+
+  <section class="panel hidden" id="authPanel">
+    <div id="signedOut">
+      <div class="loginbox"><input id="email" type="email" placeholder="邮箱"><input id="password" type="password" placeholder="密码（至少 6 位）"><button class="btn" id="loginBtn">登录</button><button class="btn alt" id="signupBtn">注册</button></div>
+    </div>
+    <div id="signedIn" class="hidden"><div class="row"><b id="userLabel"></b><button class="btn" id="syncBtn">立即同步</button><button class="btn alt" id="logoutBtn">退出</button></div></div>
+    <div class="cloud" id="cloudStatus">未登录，本机仍会保存进度。</div>
+  </section>
+
+  <section class="panel" id="home">
+    <div class="grid">
+      <button class="mode active" data-mode="single"><strong>三选一</strong><small>3 个差异轴先装进脑子</small></button>
+      <button class="mode" data-mode="multi"><strong>五选二</strong><small>专练概括映射与排干扰</small></button>
+      <button class="mode" data-mode="matching"><strong>匹配题</strong><small>共享选项，连续听 4 个对象</small></button>
+    </div>
+    <div class="stats"><div class="stat"><b id="stDone">0</b><span>累计题目</span></div><div class="stat"><b id="stAcc">—</b><span>正确率</span></div><div class="stat"><b id="stPre">—</b><span>上膛完成率</span></div><div class="stat"><b id="stStreak">0</b><span>连续正确</span></div></div>
+    <div class="row" style="margin-top:14px"><label>每组 <select id="countSel"><option>6</option><option selected>8</option><option>10</option></select> 题</label><label>上膛 <select id="prepSel"><option>4</option><option selected>6</option><option>8</option></select> 秒</label><label>语速 <select id="rateSel"><option value="0.92">0.92×</option><option value="1" selected>1.0×</option><option value="1.06">1.06×</option></select></label><button class="btn" id="startBtn">开始训练</button></div>
+    <p class="muted" style="margin-bottom:0">原创题，不搬剑雅原文。训练目标只有一个：新题出现 → 扫选项差异 → 带着差异去听 → 听完立刻落答案 → 扔掉上一题。</p>
+  </section>
+
+  <section class="panel hidden" id="session">
+    <div class="row" style="justify-content:space-between"><b id="progressText">1 / 8</b><span class="timer" id="phaseText">选项上膛</span></div><div class="bar"><i id="progressBar"></i></div>
+    <div id="preloadBox"><div class="question" id="stem"></div><div class="options" id="preOptions"></div><div class="preload" id="axisText"></div><div class="row"><span class="timer" id="prepTimer"></span><button class="btn" id="armedBtn">差异已装入</button></div></div>
+    <div id="listenBox" class="hidden"><div class="question" id="listenStem"></div><div class="options" id="answerOptions"></div><div id="matchingAnswers"></div><div class="row" style="margin-top:12px"><button class="btn" id="playBtn">▶ 播放</button><button class="btn alt" id="submitBtn">提交并切下一题</button></div><p class="muted" id="listenHint">不要回想上一题。答案落下就切。</p></div>
+  </section>
+
+  <section class="panel hidden" id="summary"><h2 style="margin-top:0">本组结束</h2><div class="stats"><div class="stat"><b id="sumScore"></b><span>得分</span></div><div class="stat"><b id="sumAcc"></b><span>正确率</span></div><div class="stat"><b id="sumPre"></b><span>上膛率</span></div><div class="stat"><b id="sumLag"></b><span>平均上膛</span></div></div><div id="review"></div><div class="row"><button class="btn" id="againBtn">再来一组</button><button class="btn alt" id="homeBtn">返回首页</button></div></section>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
