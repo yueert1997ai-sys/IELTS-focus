@@ -1,0 +1,28 @@
+{
+  "version": "4.0",
+  "source_name": "s3-focus-v4.0-natural-tts.html",
+  "bytes": 391765,
+  "sha256": "4921cab4583ae861b073f6eb9eda5d07244e6c887f41ff96744450893228a1f6",
+  "compression_single_questions": 140,
+  "compression_matching_sets": 15,
+  "preload_themes": 20,
+  "preload_single_questions": 80,
+  "preload_choose_two_sets": 20,
+  "preload_matching_questions": 80,
+  "parts": [
+    {"path":"source/v4.0.part00.xz","size":8192,"git_sha":"f70fd11f1a3a94ac0503bbdb17abc3a5c9c2dac3"},
+    {"path":"source/v4.0.part01.xz","size":8192,"git_sha":"d157d98d80efdcf144ae61bca9ee457e172470e8"},
+    {"path":"source/v4.0.part02.xz","size":8192,"git_sha":"3720286d1834ef8123e471daf18d6e374f47f666"},
+    {"path":"source/v4.0.part03.xz","size":8192,"git_sha":"85de788085e08327dcdf52c11504115dcbd02e17"},
+    {"path":"source/v4.0.part04.xz","size":8192,"git_sha":"3ef1a782d5d34112a6b41d580e8db363d08a7a1f"},
+    {"path":"source/v4.0.part05.xz","size":8192,"git_sha":"94e9c031fb80818c62908d3bbe049cd4cc78cd02"},
+    {"path":"source/v4.0.part06.xz","size":8192,"git_sha":"fa2c1a2b34433f8959d6db5998eb9f3cc3956820"},
+    {"path":"source/v4.0.part07.xz","size":8192,"git_sha":"7349673992550ac4ae4eca84896a60a1bb816a79"},
+    {"path":"source/v4.0.part08.xz","size":8192,"git_sha":"1f97069c6fe7cb19033332125502fc1e4ab9f676"},
+    {"path":"source/v4.0.part09.xz","size":8192,"git_sha":"f1896189320839b6db136b1fa73b20157ef85b96"},
+    {"path":"source/v4.0.part10.xz","size":8192,"git_sha":"1313b704d951b037ee00caa2dac6b6674f92a103"},
+    {"path":"source/v4.0.part11.xz","size":8192,"git_sha":"d5ee10515d42a450a6c1aeed8bd6802e2e31f5e0"},
+    {"path":"source/v4.0.part12.xz","size":8192,"git_sha":"831839c5c3e831cbe94d3ff2a6466db9fab3873c"},
+    {"path":"source/v4.0.part13.xz","size":4656,"git_sha":"c15412da4a0fe3fbfef5a534e6626da8aa365f6f"}
+  ]
+}
