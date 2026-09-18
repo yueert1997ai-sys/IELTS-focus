@@ -1,0 +1,22 @@
+name: Verify complete v4.0 source
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify canonical HTML checksum before reconstruction
+        run: |
+          echo '4921cab4583ae861b073f6eb9eda5d07244e6c887f41ff96744450893228a1f6  index.html' | sha256sum -c -
+      - name: Verify source archive, question counts and JavaScript syntax
+        run: |
+          python3 scripts/restore.py
+          git diff --exit-code -- index.html
